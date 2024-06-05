@@ -98,7 +98,7 @@
                             </div>
                             <div class="col-xl-12 col-md-12">
                                 <div class="form-group mb-3">
-                                    <label class="form-label" for="formrow-firstname-input">Date <strong class="is-small">(e.g: 12 may, xxxx)</strong></label>
+                                    <label class="form-label" for="formrow-firstname-input">Date <strong class="is-small">(e.g: dd mm, xxxx)</strong></label>
                                     <input type="text" name="date" class="form-control" >
                                 </div>
                             </div>

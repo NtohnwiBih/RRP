@@ -137,6 +137,12 @@
                                     <input type="text" name="price" class="form-control" value="{{$studio->property->amount}}">
                                 </div>
                             </div>
+                            <div class="col-xl-12 col-md-12">
+                                <div class="form-group mb-3">
+                                    <label class="form-label" for="formrow-firstname-input">Date <strong class="is-small">(e.g: dd mm, xxxx)</strong></label>
+                                    <input type="text" name="date" class="form-control" value="{{$studio->property->date}}">
+                                </div>
+                            </div>
                             {{-- Image Upload Section --}}
                             <div class="col-xl-12 mb-3">
                                 <div class="forn-group control">

@@ -37,7 +37,9 @@ class FrontendController extends Controller
     public function blogDetail($id)
     {
          $post_details = Post::findOrFail($id);
-        return view('front.blog.blog_details',compact('post_details'));
+         // Fetch related posts
+        $relatedPosts = $post_details->relatedPosts()->limit(5)->get();
+        return view('front.blog.blog_details',compact('post_details', 'relatedPosts'));
     }
 
     public function rent()
@@ -108,7 +110,9 @@ class FrontendController extends Controller
     public function propertyDetail($id)
     {
          $favorite_details = Favorite::findOrFail($id);
-        return view('front.properties.property_details',compact('favorite_details'));
+          // Fetch related posts
+        $relatedProperties = $favorite_details->relatedProperties()->limit(6)->get();
+        return view('front.properties.property_details',compact('favorite_details', 'relatedProperties'));
     }
 
     public function search(Request $request)

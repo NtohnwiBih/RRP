@@ -43,6 +43,10 @@
                             <label for="image">Featured Image</label>
                             <input type="file" class="form-control" id="image" name="image">
                         </div>
+                        <div class="form-group mb-3">
+                            <label class="form-label" for="formrow-firstname-input">Date <strong class="is-small">(e.g: dd mm, xxxx)</strong></label>
+                            <input type="text" name="date" class="form-control" >
+                        </div>
                         <button type="submit" class="btn btn-primary mr-2">Submit</button>
                         <button type="reset"  class="btn btn-light">Cancel</button>
                     </form>

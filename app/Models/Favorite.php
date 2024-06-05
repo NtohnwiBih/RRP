@@ -9,6 +9,12 @@ class Favorite extends Model
 {
     use HasFactory;
 
+    public function user(){
+
+        return $this->belongsTo(User::class);
+
+    }
+
     public function property(){
 
         return $this->belongsTo(Property::class);
@@ -31,6 +37,12 @@ class Favorite extends Model
 
         return $this->belongsTo(Vehicle::class);
 
+    }
+
+    public function relatedProperties()
+    {
+        return $this->hasMany(Favorite::class, 'property_id', 'property_id')
+                    ->where('id', '!=', $this->id);
     }
 
     public function room(){

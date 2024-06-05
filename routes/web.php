@@ -33,9 +33,8 @@ Route::get('property/{id}', [FrontendController::class, 'propertyDetail'])->name
 Route::post('property/search', [SearchController::class, 'index'])->name('search');
 Route::get('blog', [FrontendController::class, 'blog'])->name('blog'); 
 Route::get('blog/{id}', [FrontendController::class, 'blogDetail'])->name('blogDetail');
+Route::post('/posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
 
-Route::post('posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
-Route::delete('posts/{post}/comments/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
 
 Route::prefix('admin')->group(function (){  
     /**
